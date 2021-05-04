@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student Community Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+    <div class="topnav" id="nav-placeholder">
+
+    </div>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+    <main>
+        <header>
+            <form class="compose">
+                <textarea placeholder="Compose new post..."></textarea>
+
+                <div>
+                    <span class="count">140</span>
+                    <button>Send</button>
+                </div>
+            </form>
+        </header>
+
+        <div class="posts">
+            <div class="thread">
+                <div class="post">
+                    <img src="images/rockit.png">
+
+                    <div class="body">
+                        <div class="title">@WEBTECH_GROUP</div>
+                        <div class="message">post post!!</div>
+                    </div>
+                </div>
+
+                <div class="replies">
+                    <form class="compose">
+                        <textarea placeholder="Compose new post..."></textarea>
+
+                        <div>
+                            <span class="count">140</span>
+                            <button>Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="thread">
+                <div class="post">
+                    <img src="images/rockit.png">
+
+                    <div class="body">
+                        <div class="title">@WEBTECH_GROUP</div>
+                        <div class="message">post post!!</div>
+                    </div>
+                </div>
+
+                <div class="replies">
+                    <form class="compose">
+                        <textarea placeholder="Compose new post..."></textarea>
+
+                        <div>
+                            <span class="count">140</span>
+                            <button>Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="thread">
+                <div class="post">
+                    <img src="images/rockit.png">
+
+                    <div class="body">
+                        <div class="title">@WEBTECH_GROUP</div>
+                        <div class="message">Hey who wants to teach?</div>
+                    </div>
+                </div>
+
+                <div class="replies">
+                    <form class="compose">
+                        <textarea placeholder="Compose new post..."></textarea>
+
+                        <div>
+                            <span class="count">140</span>
+                            <button>Send</button>
+                        </div>
+                    </form>
+
+                    <div class="post">
+                        <img src="images/brad.png">
+
+                        <div class="body">
+                            <div class="title">@bradwestfall</div>
+                            <div class="message">I do!</div>
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <img src="images/rockit.png">
+
+                        <div class="body">
+                            <div class="title">@WEBTECH_GROUP</div>
+                            <div class="message">sweet!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Handlebars Templates -->
+    <script id="template-post" type="text/x-handlebars-template">
+        <div class="post">
+            <img src="images/{{ img }}">
+
+            <div class="body">
+                <div class="title">{{ handle }}</div>
+                <div class="message">{{ message }}</div>
+            </div>
+        </div>
+    </script>
+
+    <script id="template-compose" type="text/x-handlebars-template">
+        <div class="replies">
+            <form class="compose">
+                <textarea placeholder="Compose new post..."></textarea>
+
+                <div>
+                    <span class="count">140</span>
+                    <button>Send</button>
+                </div>
+            </form>
+        </div>
+    </script>
+
+    <script id="template-thread" type="text/x-handlebars-template">
+        <div class="thread">
+            {{{ postTemplate }}}
+            {{{ composeTemplate }}}
+        </div>
+    </script>
+
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
