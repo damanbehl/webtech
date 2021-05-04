@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Community</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/hangman.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/hangman.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="topnav" id="nav-placeholder">
+
+    </div>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+<h1>Hangman<br>
+    Let's play this game</h1>
+  <p id="ratefeld"></p>
+  <form name="formconcerned">
+  <input name="textconcerned" type="text" size="5" maxlength="1">
+  <input name="checking" type="button" value="Guess" onClick="onclickEvented()">
+  
+  <p id="generateGuess">Wrong Letters:</p>
+  <img src="images/brad.png" id="hangman"><br />
+  <input name="refresh" type="button" value="New Game" onClick="location.reload()">
+  </form>
+</body>
+</html>
+
+ 
+ 
+ 
+ 
